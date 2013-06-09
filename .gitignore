@@ -1,34 +1,16 @@
 #################
-## Eclipse
+## Custom
 #################
 
-*.pydevproject
-.project
-.metadata
-bin/
-tmp/
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.classpath
-.settings/
-.loadpath
+App/Scripts
+*.js
+*.js.map
+*.min.js
+!App/Scripts/AngularAlpha
+!App/Scripts/AngularAlpha/*.js
+!App/Scripts/AngularAlpha/Angular.js
 
-# External tool builders
-.externalToolBuilders/
-
-# Locally stored "Eclipse launch configurations"
-*.launch
-
-# CDT-specific
-.cproject
-
-# PDT-specific
-.buildpath
-
-
+App/node_modules
 #################
 ## Visual Studio
 #################

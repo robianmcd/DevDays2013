@@ -1,0 +1,26 @@
+﻿<h1>Sign In</h1>
+<form class="form-horizontal">
+    <div class="control-group">
+        <label class="control-label" for="nameInput">What is your name? </label> 
+        <div class="controls">
+            <input id="nameInput" type="text" data-ng-model="ctrl.name"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="questInput">What is your quest? </label> 
+        <div class="controls">
+            <input id="questInput" type="text" data-ng-model="ctrl.quest"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="colourInput">What is your favourite colour? </label> 
+        <div class="controls">
+            <input id="colourInput" type="text" data-ng-model="ctrl.favouriteColour"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <button class="btn" data-ng-click="ctrl.signIn()"> Sign In</button>
+        </div>
+    </div>
+</form>

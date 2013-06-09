@@ -1,0 +1,31 @@
+﻿
+
+<h1>DevDays Guestbook</h1>
+<p>Welcome {{ctrl.userName}}. I see you like the colour {{ctrl.favouriteColour}}.</p>
+
+
+
+<form>
+    <div>
+        Create a post.
+    </div>
+    <div>
+        <textarea data-ng-model="ctrl.message" rows="3"></textarea>
+    </div>
+    <div>
+        <button data-ng-click="ctrl.addPost()">Add Post</button>
+    </div>
+    
+</form>
+
+
+<div class="entries-section">
+    <div class="guest-book-entry" data-ng-repeat="entry in ctrl.entries">
+        <div class="entry-header">
+            {{entry.name}}
+            <span class="icon-trash pull-right" data-ng-click="ctrl.deletePost(entry)"></span>
+
+        </div>
+              <div class="entry-body">{{entry.message}}</div>
+          </div>
+</div>

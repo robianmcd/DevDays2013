@@ -1,0 +1,14 @@
+Mongo
+	Install mongo and run it as a windows service http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/ .
+
+VS Plugins:
+	-chutzpah
+	-NuGet
+	-TextHighlight Extension
+	-ProPowerTools
+	-TypeScript
+	-WebEssentials
+	
+Node Modules (do "npm ls -g" to list global modules and "npm ls" to list local ones.):
+	npm install -g mongodb
+	npm install express

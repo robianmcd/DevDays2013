@@ -1,0 +1,43 @@
+﻿
+body {
+    background-color: #CCC;
+    font-size: 1em;
+    line-height: 1.4;
+    margin: 2em;
+}
+
+.content {
+    background-color: #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.ng-view {
+    padding: 0px 5px 5px 5px;
+}
+
+.entries-section {
+    padding: 30px 0px 0px 0px;
+}
+
+.guest-book-entry {
+    padding: 0px 0px 15px 0px;
+}
+
+.entry-header {
+    background-color: #b3d4fc;
+}
+
+.entry-body {
+    
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
