@@ -74,13 +74,18 @@ server.post('/api/entries/delete', (req, res) => {
 
     var entry = <Data.GuestbookEntry> req.body;
 
-    db.entries.remove({ _id: new mongodb.ObjectID(entry._id) }, (err, result) => {
+    db.entries.remove(mongoHelper.createQueryID(entry._id), (err, result) => {
         console.log(result + " entries deleted from the entries collection.");
         res.send({entriesDeleted: result});
     });
 
 });
 
+module mongoHelper {
+    export function createQueryID(id: string) {
+        return { _id: new mongodb.ObjectID(id) };
+    }
+}
 
 server.listen(3000);
 console.log('Listening on port 3000...');
