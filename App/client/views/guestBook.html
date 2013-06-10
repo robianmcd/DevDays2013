@@ -23,8 +23,6 @@
     <div class="guest-book-entry" data-ng-repeat="entry in ctrl.entries">
         <div class="entry-header">
             {{entry.name}}
-            <span class="icon-trash pull-right" data-ng-click="ctrl.deletePost(entry)"></span>
-
         </div>
         <div class="entry-body">{{entry.message}}</div>
     </div>

@@ -44,13 +44,6 @@ class GuestBookCtrl {
         
     }
 
-    public deletePost(entry: Data.GuestbookEntry) {
-        this.$http.post('/api/entries/delete', entry)
-            .success((data, status, headers, config) => {
-                this.populateEntries();
-            });
-    }
-
     private onRecievedEntries(data: any, status: number, headers: (headerName: string) => string, config: ng.IRequestConfig) {
         this.$log.info("Successfully recieved entries from server");
         this.entries = data;

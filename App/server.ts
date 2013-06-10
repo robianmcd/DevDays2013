@@ -69,18 +69,6 @@ server.post('/api/entries', (req, res) => {
     });
 });
 
-server.post('/api/entries/delete', (req, res) => {
-    console.log("Recieved post request to /api/entries/delete.");
-
-    var entry = <Data.GuestbookEntry> req.body;
-
-    db.entries.remove(mongoHelper.createQueryID(entry._id), (err, result) => {
-        console.log(result + " entries deleted from the entries collection.");
-        res.send({entriesDeleted: result});
-    });
-
-});
-
 module mongoHelper {
     export function createQueryID(id: string) {
         return { _id: new mongodb.ObjectID(id) };

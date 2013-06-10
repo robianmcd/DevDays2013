@@ -24,8 +24,6 @@ class GuestBookCtrlTestScope {
             return [<any>200, <any>this.entriesFromServer.slice(0), <any>{}];
         });
         this.$httpBackend.whenPOST("/api/entries").respond(200);
-
-        this.$httpBackend.whenPOST("/api/entries/delete").respond({ entriesDeleted: 1 });
     }
 }
 
@@ -74,27 +72,5 @@ describe("The GuestBookCtrl", () => {
         testScope.$httpBackend.flush();
         
         expect(testScope.guestBookCtrl.entries).toContain(newEntry);
-    });
-
-    it('should send an entry to the server when a user deletes it.', () => {
-        var entryToDelete = testScope.entriesFromServer[1];
-
-        testScope.$httpBackend.expectPOST("/api/entries/delete", JSON.stringify(entryToDelete));
-        testScope.guestBookCtrl.deletePost(entryToDelete);
-        testScope.$httpBackend.flush();
-
-    });
-
-    it('should remove a deleted entry from its list of entries.', () => {
-        var entryToDelete = testScope.entriesFromServer[1];
-
-        testScope.entriesFromServer = [testScope.entriesFromServer[0]];
-        testScope.guestBookCtrl.deletePost(entryToDelete);
-        expect(testScope.guestBookCtrl.entries).toContain(entryToDelete);
-        
-        testScope.$httpBackend.flush();
-
-        expect(testScope.guestBookCtrl.entries).toNotContain(entryToDelete);
-
     });
 });
