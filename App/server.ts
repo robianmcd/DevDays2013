@@ -58,7 +58,7 @@ server.get('/api/entries', (req, res) => {
 });
 
 server.post('/api/entries', (req, res) => {
-    var entry = req.body;
+    var entry: Data.GuestbookEntry = req.body;
 
     db.entries.insert(entry, { safe: true }, (err, result) => {
         if (err) {
